@@ -1,5 +1,6 @@
 ### Heuristics Workshop
-A sliding puzzle solver using the A* algorithm
+This is the starter code for the Heuristics workshop. The first of a three part series focusing on traditional AI techniques.
+This session will focus on heuristics and we'll implement the A* algorithm to solve sliding puzzles!
 
 ### Getting Started
 1. Make sure you have [Python 3.6](https://www.python.org/) installed.

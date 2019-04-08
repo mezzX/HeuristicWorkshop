@@ -1,6 +1,16 @@
+[//]: # (Image References)
+
+[image1]: ./img/MainMenu.jpg "Main Menu"
 ### Heuristics Workshop
 This is the starter code for the Heuristics workshop. The first of a three part series focusing on traditional AI techniques.
 This session will focus on heuristics and we'll implement the A* algorithm to solve sliding puzzles!
+
+To successfully implement A* you will need to follow the instructions for the following PuzzleSolver class methods in solver.py:
+    
+    - score_board
+    - expand
+    - get_total_cost
+    - explore
 
 ### Getting Started
 1. Make sure you have [Python 3.6](https://www.python.org/) installed.
@@ -31,11 +41,18 @@ Navigate to the directory and run puzzle.py
 
     python puzzle.py
 
-Click on Browse to select an image to be used for the puzzle tiles
+![Main Menu][image1]
 
-Next select the size of the puzzle. Selecting 3 will make it a 3x3 sliding puzzle.
+1. Click on Browse to select an image to be used for the puzzle tiles. 
+   Brain_icon.png and smiley_face.png have provided in this repo as puzzle tiles.
 
-Finally click start to generate the puzzle
+2. Select the size of the puzzle. Selecting 3 will make it a 3x3 sliding puzzle.
+
+3. Set how many moves to generate to shuffle the board.
+
+4. (Optional) Set a seed to be used when shuffling the board. A value of 0 will result in a random board.
+
+5. Finally click start to generate the puzzle.
 
 ### Controls
 Arrow keys to move the tiles around the gap<br>

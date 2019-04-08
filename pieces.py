@@ -12,8 +12,8 @@ class Tiles():
     def add(self, tile):
         self.tiles.append(tile)
 
-    def shuffle(self,shuffle):
-        order = self.solver.shuffle(shuffle)
+    def shuffle(self, shuffle, seed):
+        order = self.solver.shuffle(shuffle, seed)
         i = 0
         for row in range(self.grid):
             for col in range(self.grid):

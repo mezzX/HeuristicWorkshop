@@ -78,7 +78,7 @@ class PuzzleSolver():
         '''
         self.frontier[mk_string(self.puzzle)] = [self.score_board(self.puzzle), [], self.puzzle]
 
-    def shuffle(self, n):
+    def shuffle(self, n, seed):
         '''
         Returns a random tile order by taking n number of random actions starting from the solution board.
         prev_action is used to make sure that no 2 consecutive moves cancel each other out.
@@ -86,7 +86,11 @@ class PuzzleSolver():
         Params
         ======
             n(int) : The number of random moves to generate before returning.
+            seed(int) : The seed used for shuffling the board. Only used if > 0.
         '''
+
+        if seed > 0:
+            random.seed(seed)
         prev_action = None
         board = self.answer
         tile_order = []

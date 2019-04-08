@@ -8,7 +8,7 @@ from tkinter import Frame
 class Board(Frame):   
     MAX_BOARD_SIZE = 512
 
-    def __init__(self, parent, image, grid, shuffle, win, restart, *args, **kwargs):
+    def __init__(self, parent, image, grid, shuffle, seed, win, restart, *args, **kwargs):
         Frame.__init__(self, parent, *args, **kwargs)
 
         self.parent = parent
@@ -19,7 +19,7 @@ class Board(Frame):
         self.image = self.open_image(image)
         self.tile_size = self.image.size[0] / self.grid
         self.tiles = self.create_tiles()
-        self.tiles.shuffle(shuffle)
+        self.tiles.shuffle(shuffle, seed)
         self.bind_keys()
         self.tiles.show()
 

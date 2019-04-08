@@ -11,6 +11,7 @@ class Puzzle():
         self.image = StringVar()
         self.win_text = StringVar()
         self.grid = IntVar()
+        self.seed = IntVar(0)
         self.shuffle = IntVar()
         self.create_widgets()
 
@@ -28,6 +29,9 @@ class Puzzle():
         # Number of random moves generated to shuffle the puzzle
         Label(frame, text='Shuffle').grid(sticky=W)
         OptionMenu(frame, self.shuffle, *[200,100,200,300,400,500]).grid(row=2, column=1, padx=10, pady=10, sticky=W)
+        # Seed for shuffling the sliding puzzle
+        Label(frame, text='Seed').grid(sticky=W)
+        Entry(frame, textvariable=self.seed, width=5).grid(row=3, column=1, padx=10, pady=10, sticky=W)
 
         frame.pack()
         Button(self.mainFrame, text='Start', command=self.start).pack(padx=10, pady=10)
@@ -41,8 +45,9 @@ class Puzzle():
         image = self.image.get()
         grid = self.grid.get()
         shuffle = self.shuffle.get()
+        seed = self.seed.get()
         if os.path.exists(image):
-            self.board = board.Board(self.parent, image, grid, shuffle, self.win, self.restart)
+            self.board = board.Board(self.parent, image, grid, shuffle, seed, self.win, self.restart)
             self.mainFrame.pack_forget()
             self.board.pack()
 

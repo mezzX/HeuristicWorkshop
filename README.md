@@ -17,7 +17,7 @@ To successfully implement A* you will need to follow the instructions for the fo
 
 2. Clone the repository
     ```bash
-    git clone https://github.com/mezzX/sliding_puzzle_solver.git
+    git clone https://github.com/mezzX/HeuristicWorkshop
     ```
     
 3. Use [Conda](https://conda.io/projects/conda/en/latest/user-guide/install/index.html) to create a new environment and install dependencies
